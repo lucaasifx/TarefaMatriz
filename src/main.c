@@ -8,12 +8,14 @@
 
 
 // ************************ LIBS ***************************
+// biblioteca para manipulação de leds
 #include "lib/led.h"
+// biblioteca para manipulação de botões
 #include "lib/button.h"
+// biblioteca para manipulação de interrupções
 #include "lib/interrupt.h"
+// biblioteca para manipulação da matriz de leds
 #include "lib/matrix.h"
-
-// ********************* MACROS *****************************
 
 
 int main() {
@@ -31,10 +33,14 @@ int main() {
     uint offset = pio_add_program(pio, &ws2812_program);
 
     ws2812_program_init(pio, sm, offset, WS2812_PIN, 800000, IS_RGBW);
-    turn_led_on(LED_RED);
+    
+    // Inicialmente exibe o numero zero
+    set_one_led(numbers[actual_number], led_r, led_g, led_b);
     while(true) {
-        set_one_led(numbers[actual_number], led_r, led_g, led_b);
-        sleep_ms(100);
+        // 5 ciclos de 200ms totalizando 1 segundo
+            // 100ms ligado
+            // 100ms desligado
+        blink_led(LED_RED, 100, 5);
     }
     return 0;
 }

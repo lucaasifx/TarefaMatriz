@@ -15,5 +15,6 @@ void gpio_irq_handler(uint gpio, uint32_t events) {
         actual_number++;
     if(gpio == BUTTON_2 && actual_number)
         actual_number--;
+    set_one_led(numbers[actual_number], led_r, led_g, led_b);
     printf("Contador: %d\n", actual_number);
 }
