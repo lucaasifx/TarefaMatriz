@@ -3,10 +3,7 @@
 #include <stdio.h>
 
 
-uint8_t led_r = 100;
-uint8_t led_g = 0;
-uint8_t led_b = 0;
-
+// **************** NUMEROS NA MATRIZ *************************
 bool number_0[] = {
     0, 1, 1, 1, 0, 
     0, 1, 0, 1, 0, 
@@ -56,7 +53,6 @@ bool number_6[] = {
     0, 1, 0, 0, 0, 
     0, 1, 1, 1, 0
 };
-
 bool number_7[] = {
     0, 0, 0, 1, 0, 
     0, 1, 0, 0, 0, 
@@ -64,7 +60,6 @@ bool number_7[] = {
     0, 0, 0, 1, 0, 
     0, 1, 1, 1, 0
 };
-
 bool number_8[] = {
     0, 1, 1, 1, 0, 
     0, 1, 0, 1, 0, 
@@ -72,7 +67,6 @@ bool number_8[] = {
     0, 1, 0, 1, 0, 
     0, 1, 1, 1, 0
 };
-
 bool number_9[] = {
     0, 1, 1, 1, 0, 
     0, 0, 0, 1, 0, 
@@ -80,14 +74,23 @@ bool number_9[] = {
     0, 1, 0, 1, 0, 
     0, 1, 1, 1, 0
 };
+// **************************************************************
+// ************************* MACROS *****************************
 
+// ponteiro para a matriz que está atualmente sendo exibida
 bool *numbers[] = {number_0, number_1, number_2, 
                     number_3, number_4, number_5,
                     number_6, number_7, number_8,
                     number_9};
-
+// variável global que controla o numero a ser exibido
 uint actual_number = 0;
 
+// controla a intensidade da cor dos leds
+uint8_t led_r = 100;
+uint8_t led_g = 0;
+uint8_t led_b = 0;
+
+// ************ FUNÇÕES PARA CONTROLE DA MATRIZ *****************
 void put_pixel(uint32_t pixel_grb) {
     pio_sm_put_blocking(pio0, 0, pixel_grb << 8u);
 }

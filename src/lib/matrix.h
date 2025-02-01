@@ -7,6 +7,7 @@
 #define WS2812_PIN 7
 #define IS_RGBW false
 
+
 extern uint8_t led_r; // Intensidade do vermelho
 extern uint8_t led_g; // Intensidade do verde
 extern uint8_t led_b; // Intensidade do azul
