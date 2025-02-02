@@ -83,7 +83,7 @@ bool *numbers[] = {number_0, number_1, number_2,
                     number_6, number_7, number_8,
                     number_9};
 // variável global que controla o numero a ser exibido
-uint actual_number = 0;
+volatile uint actual_number = 0;
 
 // controla a intensidade da cor dos leds
 uint8_t led_r = 100;

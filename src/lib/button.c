@@ -6,10 +6,10 @@
 void init_button(uint8_t buttonGPIO) {
     gpio_init(buttonGPIO);
     gpio_set_dir(buttonGPIO, GPIO_IN);
-    // add resistence to get accurate readings
-    // STATES
-        // 1: if not pressed
-        // 0: if pressed
+    // Adiciona um resistor no circuito para tornar a leitura mais precisa
+    // Estados (padrão)
+        // 1: se não estiver pressionado
+        // 0: se pressionado
     gpio_pull_up(buttonGPIO);
 }
 

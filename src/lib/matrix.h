@@ -12,7 +12,7 @@ extern uint8_t led_r; // Intensidade do vermelho
 extern uint8_t led_g; // Intensidade do verde
 extern uint8_t led_b; // Intensidade do azul
 extern bool *numbers[];
-extern uint actual_number;
+extern volatile uint actual_number;
 void set_one_led(bool *ledbuffer, uint8_t r, uint8_t g, uint8_t b);
 
 
