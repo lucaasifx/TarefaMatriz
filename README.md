@@ -68,7 +68,7 @@ O projeto foi desenvolvido em C e utiliza o simulador **Wokwi** para emular o ci
 ## 📹 Demonstração em Vídeo
 📺 **Veja o projeto em ação**:
 
-🔗 [Vídeo da execução no hardware](https://www.youtube.com/)
+🔗 [Vídeo de demonstração no hardware](https://youtu.be/4CH_BbvV3oQ)
 
 ---
 
